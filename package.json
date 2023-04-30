@@ -1,0 +1,36 @@
+{
+  "name": "ts-boilerplate",
+  "version": "0.0.1",
+  "description": "TypeScript Boilerplate",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "npm run compile && npm run lint && npm run format:check",
+    "compile": "tsc",
+    "format": "npm run prettier -- --write .",
+    "format:check": "npm run prettier -- --check .",
+    "lint": "eslint src --max-warnings=0",
+    "prettier": "prettier --ignore-path .gitignore",
+    "start": "ts-node src/main.ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "eumemic@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/postlight__mercury-parser": "^2.2.4",
+    "@types/ws": "^8.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.7",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
