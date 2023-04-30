@@ -2,15 +2,18 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface Env {}
+interface Env {
+  dummy: string;
+}
 
 let env: Env | undefined;
 
 export function getEnv(): Env {
   if (env) return env;
 
-  env = {};
+  env = {
+    dummy: required("DUMMY"),
+  };
 
   return env;
 
